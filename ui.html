@@ -1,0 +1,18 @@
+<p>Enter folder name to which selected frames needed to be moved</p>
+<p>Folder Name: <input id="folderName" value=""></p>
+<button id="move">Move</button>
+<button id="cancel">Cancel</button>
+<script>
+onmessage = (event) => {
+  console.log("got this from the plugin code", event.data.pluginMessage)
+}
+document.getElementById('move').onclick = () => {
+  const folderName = document.getElementById('folderName').value;
+  parent.postMessage({ pluginMessage: { type: 'folderName', folderName } }, '*')
+}
+
+document.getElementById('cancel').onclick = () => {
+  parent.postMessage({ pluginMessage: { type: 'cancel' } }, '*')
+}
+
+</script>
