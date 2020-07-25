@@ -1,1 +1,1 @@
-# dartboard-mover
+A simple Figma plugin which prepends the keyword provided by the user when plugin is invoked with along with a / so that when the respective component is exported, it gets exported under $FOLDERNAME provided by the use in UNIX systems.
